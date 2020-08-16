@@ -34,6 +34,6 @@ class ServiceProviderTest extends TestCase
     public function can_connect_to_kemp_loadmaster()
     {
         $config = $this->app['config'];
-        $client = new Signhost($config->get('signhost.appname'), $config->get('signhost.appkey'),$config->get('signhost.apikey'),$config->get('signhost.sharedsecret'),$config->get('signhost.environment'));
+        $client = new Signhost($config->get('signhost.appkey'), $config->get('signhost.apikey'), $config->get('signhost.sharedsecret'), $config->get('signhost.environment'));
     }
 }

@@ -2,13 +2,7 @@
 
 return [
     /*
-     * Signhost.com AppName
-     *
-     */
-    'appname' => env('SIGNHOST_APPNAME'),
-
-    /*
-     * Signhost.com AppName
+     * Signhost.com AppKey
      *
      */
     'appkey' => env('SIGNHOST_APPKEY'),
@@ -28,10 +22,10 @@ return [
     /*
      * Defines whether to return arrays or objects
      */
-    'returnArray' => env('SIGNHOST_RETURNARRAY','false'),
+    'returnArray' => env('SIGNHOST_RETURNARRAY', 'false'),
 
     /*
      * Request timeout
      */
-    'requestTimeout' => env('SIGNHOST_REQUEST_TIMEOUT',300),
+    'requestTimeout' => env('SIGNHOST_REQUEST_TIMEOUT', 300),
 ];

@@ -1,15 +1,9 @@
-<?php /** @noinspection PhpUnused */
+<?php
 
 namespace Signhost;
 
 use Signhost\Exception\SignhostException;
 
-/**
- * Class Signhost
- *
- * @package   laravel-signhost
- * @author    Stephan Eizinga <stephan@monkeysoft.nl>
- */
 class Signhost
 {
     /**
@@ -51,7 +45,7 @@ class Signhost
         $result = @json_decode($response, $this->shouldReturnArray);
 
         if (json_last_error() !== JSON_ERROR_NONE) {
-            throw new SignhostException('Invalid JSON returned: '. json_last_error_msg());
+            throw new SignhostException('Invalid JSON returned: ' . json_last_error_msg());
         }
 
         return $result;
@@ -107,7 +101,7 @@ class Signhost
     {
         $response = $this->client->performRequest("/transaction/" . $transactionId . "/start", "PUT");
 
-        return json_decode($response,$this->shouldReturnArray);
+        return json_decode($response, $this->shouldReturnArray);
     }
 
     /**

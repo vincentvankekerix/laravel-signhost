@@ -22,12 +22,10 @@ class TestCase extends BaseTestCase
     {
         // Setup default
         $app['config']->set('signhost', [
-            'appname' => env('SIGNHOST_APPNAME'),
             'appkey'  => env('SIGNHOST_APPKEY'),
             'apikey'  => env('SIGNHOST_APIKEY'),
             'sharedsecret'  => env('SIGNHOST_SHAREDSECRET'),
             'environment'  => env('SIGNHOST_ENVIRONMENT'),
         ]);
-
     }
 }

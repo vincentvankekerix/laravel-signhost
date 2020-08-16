@@ -5,12 +5,6 @@ namespace Signhost;
 use Signhost\Exception\SignhostException;
 use InvalidArgumentException;
 
-/**
- * Class SignhostClient
- *
- * @package   laravel-signhost
- * @author    Stephan Eizinga <stephan@monkeysoft.nl>
- */
 class SignhostClient
 {
     const OPT_CAINFOPATH = 'ca-info-path';
@@ -41,13 +35,12 @@ class SignhostClient
     private $requestOptions;
 
     public function __construct(
-        string $appName,
         string $appKey,
         string $apiKey,
         array $requestOptions = []
     ) {
         $this->headers = [
-            "Application: APPKey $appName $appKey",
+            "Application: APPKey $appKey",
             "Authorization: APIKey $apiKey",
         ];
 
@@ -149,7 +142,7 @@ class SignhostClient
 
         // Tell curl what timeout to use
         if (isset($this->requestOptions[self::OPT_TIMEOUT])) {
-            curl_setopt($curlHandle,CURLOPT_TIMEOUT, $this->requestOptions[self::OPT_TIMEOUT]);
+            curl_setopt($curlHandle, CURLOPT_TIMEOUT, $this->requestOptions[self::OPT_TIMEOUT]);
         }
 
         // Tell curl where to find the root CA's we trust.
