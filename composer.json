@@ -1,6 +1,6 @@
 {
-  "name": "steffjenl/laravel-signhost",
-  "description": "Laravel package for Signhost",
+  "name": "vincentvankekerix/laravel-signhost",
+  "description": "Laravel package for Signhost. Forked by @vincentvankekerix",
   "type": "library",
   "keywords": [
     "ondertekenen",
@@ -9,7 +9,7 @@
     "laravel",
     "api"
   ],
-  "homepage": "http://github.com/steffjenl/laravel-signhost",
+  "homepage": "http://github.com/vincentvankekerix/laravel-signhost",
   "license": "MIT",
   "authors": [
     {
